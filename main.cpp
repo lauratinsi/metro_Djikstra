@@ -45,7 +45,7 @@ int main() {
     //std:: cout << b.GetName() << std:: endl;
     //std:: cout << b.GetAnte() << std:: endl;
     //std:: cout << b.GetDistance() << std:: endl;
-    vecnodes K = vecnodes::Djikstra(M, nodes(1,-1,_infinite));
+    vecnodes K = vecnodes::Djikstra(M, nodes(1,-1,_infinite,1));
     std :: cout << K.Getv().size()<< endl;
     for (int i(0); i< K.Getv().size(); ++i){
         std :: cout << vecnodes::GetNodInVec(i, K).GetName() << endl;
