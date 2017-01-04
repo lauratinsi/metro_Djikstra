@@ -10,10 +10,11 @@ using namespace std;
 
 long _infinity = 10000000000000000;
 //int const _size = 60;
-nodes::nodes(int a, int b, long c){
+nodes::nodes(int a, int b, long c, int d){
     name=a;
     predecessor=b;
     distance=c;
+    in_out = d;
 }
 
 // Accessors
@@ -26,7 +27,9 @@ int nodes::GetName() {
 int nodes::GetAnte() {
     return predecessor;
 }
-
+int nodes::GetPosition() {
+    return in_out;
+}
 //Setters
 void nodes::SetName(int i) {
     name = i;
@@ -36,6 +39,9 @@ void nodes::SetDistance(long d) {
 }
 void nodes::SetAnte(int n) {
     predecessor = n;
+}
+void nodes::SetPosition(int i) {
+    in_out=i;
 }
 
 //Others functions
