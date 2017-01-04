@@ -17,15 +17,15 @@ public:
     vector< vector<long>> Getv();
     void Setv_predecessor(int i, int);
     void Setv_distance(int i, int);
+    void Setv_position(int i, int);
     static vecnodes creation(vector<vector<long> > G);
-    static nodes GetNodInVec(int, vecnodes &T);
+    static nodes GetNodInVec(int, vecnodes T);
     static nodes FindMin(vecnodes M);
     //void delete_in_vec(int i);
-    static void NewDist(nodes a, nodes b, vector< vector<long> > G, vecnodes &T);
-    static bool maxd(vecnodes &T);
-    static vecnodes Djikstra(vector< vector<long> > G, nodes b);
+    static void NewDist(nodes a, nodes b, vector< vector<long> > G, vecnodes* T);
+    static bool NotEmpty(vecnodes* T);
+    static vecnodes Djikstra(vector< vector<long> > G, nodes b, nodes a);
 
 };
-
 
 #endif //METRO_2_VECNODES_H
